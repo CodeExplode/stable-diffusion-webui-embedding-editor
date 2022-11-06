@@ -27,9 +27,9 @@ import torch
 # add the ability to shift all weights towards another embedding with a master slider
 # add a strength slider (multiply all weights)
 # print out the closest word(s) in the original embeddings list to the current embedding, with torch.abs(embedding1.vec - embedding2.vec).mean() or maybe sum
-# also maybe print a mouseover or have an expandable per weight slider for the closest embedding(s) for that weight value
-# maybe allowing per-weight notes, and possibly a way to save them per embedding vector
-# add option to vary individual weights one at a time and geneerate outputs, potentially also combinations of weights. Potentially use scoring system to determine size of change (maybe latents or clip interrogator)
+# also maybe print a mouseover or have an expandable info box per weight slider for the closest embedding(s) for that weight value
+# maybe add per-weight notes, and possibly a way to save them per embedding (and vector), or save them under a class name (e.g. 'animal', 'clothing', 'face')
+# add option to vary individual weights one at a time and generate outputs, potentially also varied combinations of weights. Potentially use scoring system to determine size of change (maybe latents or clip interrogator)
 # add option to 'move' around current embedding position and generate outputs (a 768-dimensional vector spiral)?
 
 
