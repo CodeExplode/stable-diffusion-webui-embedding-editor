@@ -31,6 +31,7 @@ import torch
 # maybe add per-weight notes, and possibly a way to save them per embedding (and vector), or save them under a class name (e.g. 'animal', 'clothing', 'face')
 # add option to vary individual weights one at a time and generate outputs, potentially also varied combinations of weights. Potentially use scoring system to determine size of change (maybe latents or clip interrogator)
 # add option to 'move' around current embedding position and generate outputs (a 768-dimensional vector spiral)?
+# potentially represent all weights 2 or 3 magnitudes larger, so that it's more obvious when a weight is larger than most or very small
 
 
 def determine_embedding_distribution():
