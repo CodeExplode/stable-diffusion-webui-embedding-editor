@@ -73,14 +73,15 @@ def on_ui_tabs():
                         refresh_embeddings_button = gr.Button(value="Refresh Embeddings", variant='secondary')
                         save_embedding_button = gr.Button(value="Save Embedding", variant='primary')
                     
-                    for i in range(0, 128):
-                        with gr.Row():
-                            build_slider(i*6+0, 0, distribution_floor, distribution_ceiling, weight_sliders)
-                            build_slider(i*6+1, 0, distribution_floor, distribution_ceiling, weight_sliders)
-                            build_slider(i*6+2, 0, distribution_floor, distribution_ceiling, weight_sliders)
-                            build_slider(i*6+3, 0, distribution_floor, distribution_ceiling, weight_sliders)
-                            build_slider(i*6+4, 0, distribution_floor, distribution_ceiling, weight_sliders)
-                            build_slider(i*6+5, 0, distribution_floor, distribution_ceiling, weight_sliders)
+                    with gr.Column(elem_id='embedding_editor_weight_sliders_container'):
+                        for i in range(0, 128):
+                            with gr.Row():
+                                build_slider(i*6+0, 0, distribution_floor, distribution_ceiling, weight_sliders)
+                                build_slider(i*6+1, 0, distribution_floor, distribution_ceiling, weight_sliders)
+                                build_slider(i*6+2, 0, distribution_floor, distribution_ceiling, weight_sliders)
+                                build_slider(i*6+3, 0, distribution_floor, distribution_ceiling, weight_sliders)
+                                build_slider(i*6+4, 0, distribution_floor, distribution_ceiling, weight_sliders)
+                                build_slider(i*6+5, 0, distribution_floor, distribution_ceiling, weight_sliders)
             
             with gr.Column(scale=1):
                 gallery = gr.Gallery(label='Output', show_label=False, elem_id="embedding_editor_gallery").style(grid=4)
