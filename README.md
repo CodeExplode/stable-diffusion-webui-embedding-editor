@@ -1,3 +1,5 @@
+![preview image](embedding_editor_v1.png)
+
 A very early WIP of an embeddings editor for AUTOMATIC1111's webui
 
 Should be placed in a sub-directory in extensions. e.g. \stable-diffusion-webui-master\extensions\embedding-editor\
