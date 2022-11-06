@@ -1,0 +1,7 @@
+#embedding_editor_weight_sliders_container{
+	height: 745px;
+	overflow-y: auto !important;
+	resize: vertical;
+	padding-top: 7px;
+}
+
