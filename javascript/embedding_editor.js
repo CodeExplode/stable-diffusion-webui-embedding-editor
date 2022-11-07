@@ -23,14 +23,15 @@ function embedding_editor_update_guidance(col_weights) {
 			let variant = variants[j],
 				color = variant.color,
 				weight = variant.weight * 100, // currently in decimal format
-				start = Math.max(previous, weight-1),
-				end = Math.max(previous, weight+1);
+				start = Math.max(previous, weight-2),
+				end = Math.max(previous, weight+2);
 			
-			bg += ', ' + transparent + ' ' + previous + '%';
-			bg += ', ' + transparent + ' ' + start + '%';
-			//bg += ', ' + color + ' ' + start + '%';
-			//bg += ', ' + color + ' ' + end + '%';
-			bg += ', ' + color + ' ' + weight + '%';
+			if (previous < start)
+				bg += ', ' + transparent + ' ' + previous + '%';
+				bg += ', ' + transparent + ' ' + start + '%';
+			
+			bg += ', ' + color + ' ' + Math.max(previous, weight-1) + '%';
+			bg += ', ' + color + ' ' + Math.max(previous, weight+1) + '%';
 			
 			previous = end;
 		}
