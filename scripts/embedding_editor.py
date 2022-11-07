@@ -75,7 +75,7 @@ def on_ui_tabs():
                         save_embedding_button = gr.Button(value="Save Embedding", variant='primary')
                         
                     instructions = gr.HTML(f"""
-                        <p>Enter words and color hexes to mark weights on the sliders for guidance. Hint: Use the txt2img prompt token counter or <a style="font-weight: bold;" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui-tokenizer">webui-tokenizer</a> to see which words are constructed using multiple sub-words, e.g. 'computer' doesn't exist in stable diffusion's CLIP dictionary and instead 'compu' and 'ter' are used (1 word but 2 embedding vectors)
+                        <p>Enter words and color hexes to mark weights on the sliders for guidance. Hint: Use the txt2img prompt token counter or <a style="font-weight: bold;" href="https://github.com/AUTOMATIC1111/stable-diffusion-webui-tokenizer">webui-tokenizer</a> to see which words are constructed using multiple sub-words, e.g. 'computer' doesn't exist in stable diffusion's CLIP dictionary and instead 'compu' and 'ter' are used (1 word but 2 embedding vectors). Currently buggy and needs a moment to process before pressing the button. If it doesn't work after a moment, try adding a random space to refresh it.
                         </p>
                         """)
                     with gr.Row():
