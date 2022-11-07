@@ -1,4 +1,4 @@
-![preview image](embedding_editor_v1.png)
+![preview image](embedding_editor_v2.png)
 
 A very early WIP of an embeddings editor for AUTOMATIC1111's webui.
 
