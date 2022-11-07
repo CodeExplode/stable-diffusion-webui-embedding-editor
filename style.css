@@ -5,3 +5,10 @@
 	padding-top: 7px;
 }
 
+#embedding_editor_refresh_guidance{
+    max-width: 2em;
+}
+
+[id^="embedding_editor_weight_slider_"] input[type=range] {
+  
+}
