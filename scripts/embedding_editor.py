@@ -38,8 +38,14 @@ def determine_embedding_distribution():
     cond_model = shared.sd_model.cond_stage_model
     embedding_layer = cond_model.wrapped.transformer.text_model.embeddings
     
+    # fix for medvram/lowvram - can't figure out how to detect the device of the model in torch, so will try to guess from the web ui options
+    device = devices.device
+    if cmd_opts.medvram or cmd_opts.lowvram:
+        device = torch.device("cpu")
+    #
+    
     for i in range(49405): # guessing that's the range of CLIP tokens given that 49406 and 49407 are special tokens presumably appended to the end
-        embedding = embedding_layer.token_embedding.wrapped(torch.LongTensor([i]).to(devices.device)).squeeze(0)
+        embedding = embedding_layer.token_embedding.wrapped(torch.LongTensor([i]).to(device)).squeeze(0)
         if i == 0:
             distribution_floor = embedding
             distribution_ceiling = embedding
