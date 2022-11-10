@@ -2,7 +2,7 @@
 
 A very early WIP of an embeddings editor for AUTOMATIC1111's webui.
 
-Should be placed in a sub-directory in extensions. e.g. \stable-diffusion-webui-master\extensions\embedding-editor\
+Should be placed in a sub-directory in extensions. e.g. \stable-diffusion-webui-master\extensions\embedding-editor\ You can now also install it automatically from the extensions tab in Automatic's UI.
 
 It will likely add a small amount of startup time due to fetching all the original embeddings to calculate the ranges for the weight sliders, so it's probably better to only enable when you're using it for now.
 
