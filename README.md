@@ -21,3 +21,7 @@ Changing the vector number will lose any edited weights for the current vector. 
 It's not easy to get any useful results with this yet, though some features are planned which might help a lot.
 
 These embeddings can be used as a starting point for textual inversion, or the results of textual inversion can be manually fine-tuned using these sliders. There are multiple valid embeddings for a given subject, so keeping certain weights in a range which causes the embedding to behave as the type of object which you want (e.g. a shirt, a person, a pose) may be useful, though would be better worked into the textual inversion process as a regulation method.
+
+---
+
+I'd also recommend checking out Embedding Inspector, which looks like it does a lot of what I was intending to do: https://github.com/tkalayci71/embedding-inspector
