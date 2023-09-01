@@ -1,5 +1,5 @@
 import os
-from webui import wrap_gradio_gpu_call
+from modules.call_queue import wrap_gradio_gpu_call
 from modules import scripts, script_callbacks
 from modules import shared, devices, sd_hijack, processing, sd_models, images, ui
 from modules.shared import opts, cmd_opts, restricted_opts
